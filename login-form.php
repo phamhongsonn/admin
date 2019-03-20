@@ -23,13 +23,13 @@
    <div class="box">
    <img src="./image/tmp_gcs_full_5bf8bbee76ec57660765f7b7-2018-11-24-024815.png" alt=""width="50%">
       <div class="title">Đăng Nhập</div>
-      <form action="login.php" method="post" onsubmit="return checked();" name="regform" id="regform">
+      <form action="login.php" method="post" name="regform" id="regform">
       <div class="input">
-         <input type="text" name="email" id="name"placeholder="Tên đăng nhập" require>
+         <input type="text" name="UserEmail" id="UserEmail"placeholder="Email" required>
          <span class="spin"></span>
       </div>
       <div class="input">
-         <input type="password" name="password1" id="pass"placeholder="Mật khẩu" require>
+         <input type="password" name="UserPass1" id="UserPass1"placeholder="Mật khẩu" required>
          <span class="spin"></span>
       </div>
 
@@ -40,28 +40,38 @@
       <a href="home.php" class="pass-forgot">Quay lại</a>
 
    </div>
-
    <div class="overbox">
       <div class="material-button alt-2"><span class="shape"></span></div>
       <div class="title">Đăng Kí</div>
+      <form action="register.php" method="post" name="regform" id="regform">
       <div class="input">
-         <input type="text" name="regname" id="regname"placeholder="Tên đăng nhập" require>
+      <input type="text" name="UserName" id="UserName"placeholder="Tên của bạn"
+         value="<?php if (isset($_POST['UserName'])) echo $_POST['UserName']; ?>"
+          required>
          <span class="spin"></span>
       </div>
-
       <div class="input">
-         <input type="password" name="regpass" id="regpass"placeholder="Nhập mật khẩu" require>
+         <input type="text" name="UserPhone" id="UserPhone"placeholder="Số điện thoại"
+         value="<?php if (isset($_POST['UserPhone'])) echo $_POST['UserPhone']; ?>"
+          required>
          <span class="spin"></span>
       </div>
-
       <div class="input">
-         <input type="password" name="reregpass" id="reregpass"placeholder="Nhập mật khẩu" require>
+         <input type="text" name="UserEmail" id="UserEmail"placeholder="Email của bạn"
+         value="<?php if (isset($_POST['UserEmail'])) echo $_POST['UserEmail']; ?>"
+          required>
          <span class="spin"></span>
       </div>
-
+      <div class="input">
+      <input type="password" name="UserPass" id="UserPass"placeholder="Mật khẩu"
+         value="<?php if (isset($_POST['UserPass'])) echo $_POST['UserPass']; ?>"
+          required>
+         <span class="spin"></span>
+      </div>
       <div class="button">
-         <button><span>Tiếp Tục</span></button>
+         <button type="submit">Đăng ký</button>
       </div>
+      </form>
    </div>
 
 </div>

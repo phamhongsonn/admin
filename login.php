@@ -1,27 +1,26 @@
 <?php
-
 try {
     require('mysqli_connect.php');
-    $email = $_POST['email'];	
-    $password1 = $_POST['password1'];                                              
-    $query = "SELECT email, password FROM users WHERE email = '".$email."'";			                
+    $UserEmail = $_POST['UserEmail'];	
+    $UserPass1 = $_POST['UserPass1'];                               
+    $query = "SELECT UserEmail, UserPass FROM users WHERE UserEmail = '".$UserEmail."'";			                
     $result =  $conn->query($query);
     $count = $result->num_rows;
     $row = $result->fetch_array(MYSQLI_NUM);
-    $level="SELECT user_level FROM users WHERE email = '".$email."'";
+    $level="SELECT UserLevel FROM users WHERE UserEmail = '".$UserEmail."'";
     $result_level = $conn->query($level);
     if($result_level){
         while ($row_level = $result_level->fetch_array(MYSQLI_ASSOC)) {
-        $user_level = htmlspecialchars($row_level['user_level'], ENT_QUOTES);
+        $user_level = htmlspecialchars($row_level['UserLevel'], ENT_QUOTES);
         }
     }
     else { 
         exit();
     }
     if ($count == 1) {
-        if (password_verify($password1, $row[1])) {  
+        if (password_verify($UserPass1, $row[1])) {  
             session_start();							
-            $_SESSION["user"] = $email;
+            $_SESSION["user"] = $UserEmail;
             if($user_level == 1){
                 header ("location: Dashboard.php");
                 }

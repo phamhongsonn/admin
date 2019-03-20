@@ -3,7 +3,7 @@
       <br>
       <form action="register.php" method="post" name="regform" id="regform">
          <div class="form-group row">
-            <label for="first_name" class="col-sm-4">Họ:</label>
+            <label for="first_name" class="col-sm-4">Nhập tên</label>
             <div class="col-sm-8">
                <input type="text" pattern="[A-Za-z].{1,}"  class="form-control" 
                   id="first_name" name="first_name" 

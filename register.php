@@ -1,15 +1,15 @@
 <?php
 try {
     require('mysqli_connect.php');
-    $first_name = $_POST['first_name'];	
-    $last_name = $_POST['last_name'];	
-    $email = $_POST['email'];	
-    $password = $_POST['password'];
-    $hashed_passcode = password_hash($password, PASSWORD_DEFAULT);                                        
-    $query = "INSERT INTO users (first_name, last_name, email, password, registration_date) ";
-    $query .= "VALUES(?, ?, ?, ?, NOW())";			                
+    $UserName = $_POST['UserName'];	
+    $UserPhone = $_POST['UserPhone'];	
+    $UserEmail = $_POST['UserEmail'];	
+    $UserPass = $_POST['UserPass'];
+    $hashed_passcode = password_hash($UserPass, PASSWORD_DEFAULT);                                        
+    $query = "INSERT INTO users (UserName, UserPhone, UserEmail, UserPass) ";
+    $query .= "VALUES(?, ?, ?, ?)";			                
     $stmt = $conn->prepare($query);
-    $stmt->bind_param("ssss", $first_name, $last_name, $email, $hashed_passcode);
+    $stmt->bind_param("ssss", $UserName, $UserPhone, $UserEmail, $hashed_passcode);
     if ($stmt->execute()) {		
         header ("location: userList.php"); 
         exit();
