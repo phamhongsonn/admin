@@ -1,12 +1,13 @@
 <div class="container">
-
       <h2 class="h2 text-center">Thêm người dùng</h2>
       <br>
       <form action="register.php" method="post" name="regform" id="regform">
          <div class="form-group row">
             <label for="first_name" class="col-sm-4">Họ:</label>
             <div class="col-sm-8">
-               <input type="text" pattern="[A-Za-z].{1,}" title="vui lòng nhập đúng định dạng vd : Pham" class="form-control" id="first_name" name="first_name" 
+               <input type="text" pattern="[A-Za-z].{1,}"  class="form-control" 
+                  id="first_name" name="first_name" 
+                  title="vui lòng nhập đúng định dạng vd : Pham"
                   placeholder="Họ" maxlength="30" required 
                   value="<?php if (isset($_POST['first_name'])) echo $_POST['first_name']; ?>" >
             </div>
@@ -37,5 +38,4 @@
          </div>
          <input id="submit" class="btn btn-primary btn-block" type="submit" name="submit" value="Thêm">
       </form>
-
 </div>
