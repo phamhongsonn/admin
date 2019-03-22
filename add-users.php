@@ -1,41 +1,63 @@
 <div class="container">
       <h2 class="h2 text-center">Thêm người dùng</h2>
       <br>
-      <form action="register.php" method="post" name="regform" id="regform">
-         <div class="form-group row">
-            <label for="first_name" class="col-sm-4">Nhập tên</label>
-            <div class="col-sm-8">
-               <input type="text" pattern="[A-Za-z].{1,}"  class="form-control" 
-                  id="first_name" name="first_name" 
-                  title="vui lòng nhập đúng định dạng vd : Pham"
-                  placeholder="Họ" maxlength="30" required 
-                  value="<?php if (isset($_POST['first_name'])) echo $_POST['first_name']; ?>" >
-            </div>
-         </div>
-         <div class="form-group row">
-            <label for="last_name" class="col-sm-4">Tên:</label>
-            <div class="col-sm-8">
-               <input type="text" pattern="[A-Za-z].{1,}" title="vui lòng nhập đúng định dạng vd : Son" class="form-control" id="last_name" name="last_name" 
-                  placeholder="Tên" maxlength="40" required
-                  value="<?php if (isset($_POST['last_name'])) echo $_POST['last_name']; ?>">
-            </div>
-         </div>
-         <div class="form-group row">
-            <label for="email" class="col-sm-4">E-mail:</label>
-            <div class="col-sm-8">
-               <input type="email" class="form-control" id="email" name="email" 
-                  placeholder="E-mail" maxlength="60" required
-                  value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>">
-            </div>
-         </div>
-         <div class="form-group row">
-            <label for="password1" class="col-sm-4">Mật khẩu:</label>
-            <div class="col-sm-8">
-               <input type="password" pattern="[A-Za-z0-9].{1,}" title="vui lòng không nhập kí tự !" class="form-control" id="password1" name="password1" 
-                  placeholder="Mật khẩu" minlength="8" maxlength="12" required
-                  value="<?php if (isset($_POST['password1'])) echo $_POST['password1']; ?>">
-            </div>
-         </div>
-         <input id="submit" class="btn btn-primary btn-block" type="submit" name="submit" value="Thêm">
-      </form>
+      <form action="register.php" method="post" name="form1">
+      <div class="form-group row">
+                  <label for="UserName" class="col-sm-2">Tên khách hàng </label>
+                  <div class="col-sm-10">
+                     <input type="text" pattern="[A-Za-z].{1,}" class="form-control" id="UserName" name="UserName" 
+                        placeholder="Tên" maxlength="30" required 
+                        value="<?php echo  isset($_POST['UserName'])  ?  $_POST['UserName']  : '' ?>" >
+                  </div>
+               </div>
+               <div class="form-group row">
+                  <label for="UserPhone" class="col-sm-2">Số điện thoại </label>
+                  <div class="col-sm-10">
+                     <input type="text" pattern="[0-9].{1,}" class="form-control" id="UserPhone" name="UserPhone" 
+                        placeholder="Số điện thoại" maxlength="11" required
+                        value="<?php if (isset($_POST['UserPhone'])) echo $_POST['UserPhone']; ?>">
+                  </div>
+               </div>
+               <div class="form-group row">
+                  <label for="UserEmail" class="col-sm-2">Email </label>
+                  <div class="col-sm-10">
+                     <input type="email" class="form-control" id="UserEmail" name="UserEmail" 
+                        placeholder="Email" maxlength="60" required
+                        value="<?php if (isset($_POST['UserEmail'])) echo $_POST['UserEmail']; ?>">
+                  </div>
+               </div>
+               <div class="form-group row">
+                  <label for="UserPass" class="col-sm-2">Mật khẩu</label>
+                  <div class="col-sm-10">
+                     <input type="password" class="form-control" id="UserPass" name="UserPass" 
+                        pattern="[a-z0-9].{8,}"
+                        placeholder="Mật khẩu" minlength="8" required
+                        value="<?php if (isset($_POST['UserPass'])) echo $_POST['UserPass']; ?>">
+                  </div>
+               </div>
+               <div class="form-group row">
+                  <label for="UserLevel" class="col-sm-2">Level:</label>
+                  <div class="col-sm-10">
+                     <input type="number" class="form-control" id="UserLevel" name="UserLevel" 
+                        placeholder="UserLevel" min="1" max="2" required
+                        value="<?php if (isset($_POST['UserLevel'])) echo $_POST['UserLevel']; ?>">
+                  </div>
+               </div>
+            <br>
+            <button type="submit" class="btn btn-primary btn-block">Thêm</button>
+    </form>
 </div>
+<script type="text/javascript">
+   var input = document.getElementById('UserName');
+   input.oninvalid = function(event) {
+    event.target.setCustomValidity('vui lòng nhập đúng định dạng vd : Hùng');
+}
+var input2 = document.getElementById('UserPhone');
+   input2.oninvalid = function(event) {
+    event.target.setCustomValidity('vui lòng nhập đúng định dạng vd : 0348915655');
+}
+var input3 = document.getElementById('UserPass');
+   input3.oninvalid = function(event) {
+    event.target.setCustomValidity('mật khẩu phải lớn hơn 8 kí tự và không có kí tự đặc biệt');
+}
+</script>

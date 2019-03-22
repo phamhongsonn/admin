@@ -1,6 +1,5 @@
 <?php                                                                                     
 session_start();
-//if (!isset($_SESSION['user']) or ($_SESSION['user_level'] != 1))
 if (!isset($_SESSION['user']))
 { 
   header("location: login-form.php");
@@ -17,10 +16,7 @@ if (!isset($_SESSION['user']))
    <body>
       <!DOCTYPE html>
                <html lang="en">
-                  <!--<![endif]-->
                   <head>
-                     <!-- Le Basic Page Needs
-                        ================================================== -->
                      <meta charset="utf-8">
                      <meta http-equiv="X-UA-Compatible" content="IE=edge">
                      <title>
