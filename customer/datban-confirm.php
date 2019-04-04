@@ -1,17 +1,16 @@
 <?php
 try {
     require('mysqli_connect.php');
-    $UserName = $_POST['UserName'];	
-    $UserPhone = $_POST['UserPhone'];	
-    $UserEmail = $_POST['UserEmail'];	
-    $UserPass = $_POST['UserPass'];
-    $hashed_passcode = password_hash($UserPass, PASSWORD_DEFAULT);                                        
-    $query = "INSERT INTO users (UserName, UserPhone, UserEmail, UserPass) ";
+    $id = $_POST['Pid'];
+    $OrderAmount=$_POST['OrderAmount'];
+    $OrderTime=$_POST['OrderTime'];  
+    $OrderPack=$_POST['OrderPack'];                        
+    $query = "INSERT INTO orders (UserId, OrderAmount, OrderTime, OrderPack) ";
     $query .= "VALUES(?, ?, ?, ?)";			                
     $stmt = $conn->prepare($query);
-    $stmt->bind_param("ssss", $UserName, $UserPhone, $UserEmail, $hashed_passcode);
-    if ($stmt->execute()) {	
-        header ("location: login-form.php"); 
+    $stmt->bind_param("ssss", $id, $OrderAmount, $OrderTime, $OrderPack);
+    if ($stmt->execute()) {		
+        header ("location: datban.php"); 
         exit();
     } else {
         $errorstring = "<p class='text-center col-sm-8' style='color:red'>";

@@ -17,15 +17,26 @@ try {
     else { 
         exit();
     }
+    $id="SELECT UserId FROM users WHERE UserEmail = '".$UserEmail."'";
+    $result_id = $conn->query($id);
+    if($result_id){
+        while ($row_id = $result_id->fetch_array(MYSQLI_ASSOC)) {
+        $user_id = htmlspecialchars($row_id['UserId'], ENT_QUOTES);
+        }
+    }
+    else { 
+        exit();
+    }
     if ($count == 1) {
         if (password_verify($UserPass1, $row[1])) {  
-            session_start();							
+            session_start();		
             $_SESSION["user"] = $UserEmail;
             if($user_level == 1){
                 header ("location: Dashboard.php");
                 }
                 else{
-                    echo "helo";
+                    $_SESSION["id"] = $user_id;	
+                    header ("location:customer/index.php");
                 };
         } 
         else {

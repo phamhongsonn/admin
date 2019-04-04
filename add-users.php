@@ -1,7 +1,7 @@
 <div class="container">
       <h2 class="h2 text-center">Thêm người dùng</h2>
       <br>
-      <form action="register.php" method="post" name="form1">
+      <form action="user-add.php" method="post" name="form1">
       <div class="form-group row">
                   <label for="UserName" class="col-sm-2">Tên khách hàng </label>
                   <div class="col-sm-10">

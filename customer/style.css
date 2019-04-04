@@ -1,0 +1,199 @@
+@font-face{
+    font-family: Helve;
+    src: url(./font/UTM\ Helve.ttf)
+}
+header{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.menu .navbar .collapse a{
+    font-size: 110%;
+    font-weight: bold;
+    color: #f1022a;
+    font-size: 18px;
+    font-family: Helve;
+}
+.introduce{
+    background-color: rgb(240, 240, 240);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.intro .intro-title{
+    padding-top: 50px;
+    font-family: Helve;
+    font-weight: bold;
+    font-size: 25px;
+}
+.intro .intro-body{
+    font-family: Helve;
+    font-weight: bold;
+    color: rgb(150, 150, 150);
+}
+.line{
+    height: 2px;
+    width: 20%;
+    background: #f1022a;
+    margin-bottom: 16px;
+}
+.intro a{
+    color: black;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 17px;
+    font-family: Helve;
+}
+.intro .intro-href a:hover{
+    background-color: #b9b9b9;
+    color: black;
+}
+.saleOff{
+    padding-top: 30px;
+    background-color: rgb(240, 240, 240);
+}
+.saleOff-content{
+    padding-top: 5%;
+}
+.saleOff-content .saleOff-title{
+    font-family: Helve;
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+.saleOff-content .saleOff-des{
+    font-family: Helve;
+    font-weight: bold;
+    font-size: 16px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: rgb(150, 150, 150);
+}
+.saleOff-content a{
+    color: white;
+    font-family: Helve;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: black;
+    border-radius: 3px;
+    padding: 5px;
+}
+.saleOff-content a:hover{
+    background-color: #b9b9b9;
+    color: black;
+}
+footer{
+    background:url(./images/image-1.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-family: Avo;
+    
+}
+footer h6{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+footer .address ul li a {
+    color: black;
+    border-radius: 5px;
+    background: #d4d4d4;
+}
+footer .address{
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+footer .company-info{
+   padding-top:20px;
+   padding-bottom: 20px;
+}
+footer .address ul li{
+    padding: 3px;
+}
+footer .company-info a{
+    color: white;
+}
+.color {
+    background-color: #f54334;
+    height: 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 20%;
+}
+footer .fanpage{
+    background-color: #b5b5b4;
+    color: #f54334;
+}
+footer{
+    font-family: Helve;
+    margin-top: 40px;
+    background-color: black;
+}
+.title{
+    padding-top: 30px;
+    font-family: Helve;
+    font-weight: bold;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    color: #f54334;
+    font-size: 30px;
+}
+.menuItem{
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-family: Helve;
+}
+.menuItem .menuContent .menuTitle{
+    font-size: 30px;
+}
+.news-blog .news-content{
+    font-family: Helve;
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.news-blog .news-content .news-title a{
+    text-transform: uppercase;
+    font-size: 16px;
+    color:#f54334;
+    font-weight: bold;
+    font-family: Helve;
+}
+.news-blog .news-content .news-time i{
+    color :#a1c851;
+}
+.news-blog .news-content .news-time{
+    padding-top:10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #494646
+}
+.news-blog .news-content .news-des{
+    padding-top:10px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #494646
+}
+.news-blog{
+    padding-bottom: 30px;
+}
+.fanpage{
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: Helve;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+    margin-bottom: 15px;
+}
+.pagination .page-item a{
+    color: #f54334;
+    font-weight: bold;
+    border-radius: 6px;
+}
+.pagination .page-item{
+    padding-right: 3%;
+}
+.pagination .page-item.active .page-link{
+    color: white;
+    background-color: lightgray;
+    border-color: lightgray
+}
+

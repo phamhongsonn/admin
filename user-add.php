@@ -10,8 +10,8 @@ try {
     $query .= "VALUES(?, ?, ?, ?)";			                
     $stmt = $conn->prepare($query);
     $stmt->bind_param("ssss", $UserName, $UserPhone, $UserEmail, $hashed_passcode);
-    if ($stmt->execute()) {	
-        header ("location: login-form.php"); 
+    if ($stmt->execute()) {		
+        header ("location: userList.php"); 
         exit();
     } else {
         $errorstring = "<p class='text-center col-sm-8' style='color:red'>";

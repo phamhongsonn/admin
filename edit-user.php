@@ -197,9 +197,9 @@ if (!isset($_SESSION['user']))
                                     </div>
                                  </li>
                                  <li class="nav-item">
-                                    <a href="http://bootadmin.org/app/calendar" class="nav-link wave-effect nav-single">
+                                    <a href="order-manager.php" class="nav-link wave-effect nav-single">
                                     <i class="far fa-money-bill-alt"></i>
-                                    <span class="menu-title">Sales</span>
+                                    <span class="menu-title">Order</span>
                                     </a>
                                  </li>
                               </ul>

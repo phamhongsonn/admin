@@ -155,13 +155,13 @@ if (!isset($_SESSION['user']))
                                     <div class="collapse" id="navMenu">
                                        <ul class="flex-column sub-menu">
                                           <li class="nav-item">
-                                             <a class="nav-link wave-effect waves-effect waves-block" href="#">
+                                             <a class="nav-link wave-effect waves-effect waves-block" href="add-items.php">
                                              <i class="fas fa-plus-square"></i>
                                              <span class="menu-title">Add item</span>
                                              </a>
                                           </li>
                                           <li class="nav-item">
-                                             <a class="nav-link wave-effect waves-effect waves-block" href="#">
+                                             <a class="nav-link wave-effect waves-effect waves-block" href="ItemsList.php">
                                              <i class="fas fa-list-ul"></i>
                                              <span class="menu-title">Item list</span>
                                              </a>
@@ -193,9 +193,9 @@ if (!isset($_SESSION['user']))
                                     </div>
                                  </li>
                                  <li class="nav-item">
-                                    <a href="http://bootadmin.org/app/calendar" class="nav-link wave-effect nav-single">
+                                    <a href="order-manager.php" class="nav-link wave-effect nav-single">
                                     <i class="far fa-money-bill-alt"></i>
-                                    <span class="menu-title">Sales</span>
+                                    <span class="menu-title">Order</span>
                                     </a>
                                  </li>
                               </ul>
