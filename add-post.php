@@ -1,5 +1,6 @@
 <?php                                                                                     
 session_start();
+//if (!isset($_SESSION['user']) or ($_SESSION['user_level'] != 1))
 if (!isset($_SESSION['user']))
 { 
   header("location: login-form.php");
@@ -16,7 +17,10 @@ if (!isset($_SESSION['user']))
    <body>
       <!DOCTYPE html>
                <html lang="en">
+                  <!--<![endif]-->
                   <head>
+                     <!-- Le Basic Page Needs
+                        ================================================== -->
                      <meta charset="utf-8">
                      <meta http-equiv="X-UA-Compatible" content="IE=edge">
                      <title>
@@ -203,64 +207,15 @@ if (!isset($_SESSION['user']))
                                        <h4 class="page-title">Dashboard</h4>
                                        <nav aria-label="breadcrumb">
                                           <ol class="breadcrumb">
-                                             <li class="breadcrumb-item"><a href="Dashboard.php">Home</a></li>
-                                             <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                                             <li class="breadcrumb-item"><a href="Dashboard.php">Menu</a></li>
+                                             <li class="breadcrumb-item active" aria-current="page">Add Post</li>
                                           </ol>
                                        </nav>
                                     </div>
                                  </div>
                               </div>
-                              <div class="container-fluid">
-                                 <div class="row">
-                                    <div class="col-sm-12 col-lg-4">
-                                       <div class="card card-hover">
-                                          <div class="card-body">
-                                             <div class="d-flex">
-                                                <div class="mr-4">
-                                                   <small>User</small>
-                                                   <h4 class="mb-0">
-                                                   <?php
-                                                   require('mysqli_connect.php');
-                                                   $result1 = $conn->query("SELECT COUNT(*) FROM `users`");
-                                                   $row1 = $result1->fetch_row();
-                                                   echo $row1[0];
-                                                   ?>
-                                                   </h4>
-                                                </div>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="col-sm-12 col-lg-4">
-                                       <div class="card card-hover bg-red">
-                                          <div class="card-body">
-                                             <div class="d-flex">
-                                                <div class="mr-4">
-                                                   <small>Sales</small>
-                                                   <h4 class="mb-0">$3,567.53</h4>
-                                                </div>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="col-sm-12 col-lg-4">
-                                       <div class="card card-hover bg-green">
-                                          <div class="card-body">
-                                             <div class="d-flex">
-                                                <div class="mr-4">
-                                                   <small>Post</small>
-                                                   <h4 class="mb-0">10</h4>
-                                                </div>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="row">
-                                    <div class="col-sm-12">                              
-                                    
-                                    </div>
-                                 </div>
+                              <div class="container">               
+                                <?php include('add-post-form.php') ?>                  
                               </div>
                            </main>
                         </div>

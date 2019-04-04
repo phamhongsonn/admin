@@ -73,7 +73,7 @@ window.onclick = function(event) {
             <br>
             <input type="hidden" id="Pid" name="Pid" value="<?php echo $_GET['id'];?>"/>
         <div class="col-sm-8 d-flex justify-content-end mx-auto my-4">
-          <input id="submiteditprodz" class="btn btn-success d-inline mr-2" type="button" name="submitedit" value="Confirm">
+          <input id="submiteditprodz" class="btn btn-primary d-inline mr-2" type="button" name="submitedit" value="Confirm">
           <input id="canceleditprod" class="btn btn-outline-success d-inline" type="button" value="Cancel" >
         </div>
     </form>
