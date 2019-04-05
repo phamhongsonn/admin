@@ -1,7 +1,7 @@
 <div class="container">
 <h2 class="h2 text-center">Sửa tài khoản</h2>
             <br>
-<form action="edit-users.php" method="post" name="form1">
+            <form action="edit-users.php" method="post" name="form1">
             <div> <input type="hidden" name="id"value="<?php echo $_GET['id'];?>"></div>
             <div class="form-group row">
                   <label for="UserName" class="col-sm-2">Tên khách hàng </label>

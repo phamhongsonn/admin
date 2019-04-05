@@ -12,7 +12,7 @@
                     <a class="nav-link" href="thucdon.php">Thực đơn</a>
                     <a class="nav-link" href="khuyenmai.php">Khuyến mại</a>
                     <a class="nav-link" href="datban.php">Đặt bàn</a>
-                    <a class="nav-link" href="#">Tài khoản</a>
+                    <a class="nav-link" href="taikhoan.php">Tài khoản</a>
                 </div>
             </nav>
         </div>

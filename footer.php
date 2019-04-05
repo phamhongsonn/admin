@@ -35,7 +35,7 @@
                     <p><i class="fas fa-circle"></i> <a href="thucdon.php">Thực đơn </a></p>
                     <p><i class="fas fa-circle"></i> <a href="khuyenmai.php">Khuyến mại </a></p>
                     <p><i class="fas fa-circle"></i> <a href="khuyenmai.php">Đặt bàn</a></p>
-                    <p><i class="fas fa-circle"></i> <a href="#">Tài khoản</a></p>
+                    <p><i class="fas fa-circle"></i> <a href="taikhoan.php">Tài khoản</a></p>
                 </div>
                 <div class="col-md-4 fanpage">
                     <br>
