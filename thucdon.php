@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,28 +14,7 @@
 </head>
 
 <body>
-    <header>
-        <div class="menu container">
-            <nav class="navbar navbar-light navbar-expand-md">
-                <a class="navbar-brand" href="#" style="color:#f1022a">
-                    <img src="./image/tmp_gcs_full_5bf8bbee76ec57660765f7b7-2018-11-24-024815.png" alt="" width="100">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbar1">
-                    <a class="nav-link" href="#">Giới thiệu</a>
-                    <a class="nav-link" href="#">Thực đơn</a>
-                    <a class="nav-link" href="#">Tin tức</a>
-                    <a class="nav-link" href="#">Đặt bàn</a>
-                    <a class="nav-link" href="#">Khuyến mại</a>
-                </div>
-                <form class="form-inline">
-                    <a href="#" style="color:#f1022a;font-weight: bold">Đăng nhập</a>
-                </form>
-            </nav>
-        </div>
-    </header>
+<?php include 'header.php' ?>
     <section class="slider">
         <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -123,57 +101,7 @@
   }
 ?>
     </section>
-    <footer style="margin:0">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 address">
-                    <h6> Restaurant manage </h6>
-                    <div class="color">
-                    </div>
-                    <p><i class="fas fa-map-marked-alt"></i>&emsp;Km 17, QL 21, xã Đạo Đức, huyện Vị Giang, tỉnh Hà
-                        Giang </p>
-                    <p>&nbsp;<i class="fas fa-mobile-alt"></i>&emsp;0984 337 025 </p>
-                    <p><i class="fas fa-envelope"></i>&emsp;tuanvn3c@gmail.com </p>
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fab fa-youtube"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fab fa-google-plus-g"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4 company-info">
-                    <h6> THÔNG TIN WEBSITE </h6>
-                    <div class="color">
-                    </div>
-                    <p><i class="fas fa-circle"></i><a href="#"> Trang chủ </a></p>
-                    <p><i class="fas fa-circle"></i> <a href="#">Giới thiệu </a></p>
-                    <p><i class="fas fa-circle"></i> <a href="#">Thực đơn </a></p>
-                    <p><i class="fas fa-circle"></i> <a href="#">Khuyến mại </a></p>
-                    <p><i class="fas fa-circle"></i> <a href="#">Tin tức </a></p>
-                </div>
-                <div class="col-md-4 fanpage">
-                    <br>
-                    <h6> FANPAGE </h6>
-                    <div class="color"></div>
-                    <iframe
-                        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FLaubuffetnuong%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-                        width="100%" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                        allowTransparency="true" allow="encrypted-media"></iframe>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <?php include 'footer.php' ?>
 </body>
 
 </html>

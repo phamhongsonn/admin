@@ -36,7 +36,7 @@ try {
                 }
                 else{
                     $_SESSION["id"] = $user_id;	
-                    header ("location:customer/index.php");
+                    header ("location:index.php");
                 };
         } 
         else {
